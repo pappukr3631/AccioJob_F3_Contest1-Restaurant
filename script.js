@@ -36,13 +36,13 @@ async function getMenu() {
     promTakeOrder
         .then((randomOrders) => {
             console.log(randomOrders);
-            return orderPrep();
+            return orderPrep(randomOrders);
         })
         .then((orderStatus) => {
             console.log(orderStatus);
-            return payOrder();
+            return payOrder(orderStatus);
         })
-        .then( (paymentStatus) => {
+        .then((paymentStatus) => {
             console.log(paymentStatus);
             if(paymentStatus.paid == true)
                 thankyouFnc();
@@ -68,18 +68,19 @@ function TakeOrder() {
     });
 }
 
-function orderPrep() {
+function orderPrep(randomOrders) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve({order_status:true, paid:false});
+            resolve({order_status:true, paid:false, ...randomOrders});
         }, 1500)
     });
 }
 
-function payOrder() {
+function payOrder(orderStatus) {
     return new Promise((resolve) => {
         setTimeout( () => {
-            resolve({order_status:true, paid:true});
+            orderStatus.paid = true;
+            resolve(orderStatus);
         }, 1000);
     });
 }

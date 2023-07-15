@@ -8,41 +8,41 @@
 a {
     text-decoration: none;
 }
+
+/* Top Search section */
 header {
     display: flex;
     position: fixed;
     top: 0px;
-    margin-left: 25vw;
+    margin-left: 24vw;
     justify-content: space-around;
+    padding-top: 10px;
 }
 
-.input{
+.search{
     width: 50vw;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     border: 1px solid #272A30;
     background: #272A30;
     margin: 10px 10px;
     border-radius: 5px;
 }
 
-.input img {
+.search img {
     width: 25px;
     background: #272A30;
 }
 
-.input input {
+.search input {
     width: 94%;
     height: 40px;
     border: none;
     background-color: #272A30;
+    color: #878787;
     font-size: large;
     padding-left: 10px;
-}
-
-.input input:active {
-    border: none;
+    outline: none;
 }
 
 .profile {
@@ -53,6 +53,7 @@ header {
 
 .profile img{
     width: 40px;
+    padding-right: 10px;
 }
 
 .buttons {
@@ -86,9 +87,7 @@ header {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-content: center;
-    /* background-color: hsl(30, 45%, 76%); */
-    margin-left: 25vw;
-    /* margin-top: 50px; */
+    margin-left: 22vw;
 }
 
 #container div {
@@ -138,7 +137,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    margin-left: 25vw;
+    margin-left: 22vw;
     margin-top: 10vh;
 }
 
@@ -154,7 +153,7 @@ nav{
     position: fixed;
     left: 0px;
     flex-direction: column;
-    width: 23vw;
+    width: 20vw;
     height: 100vh;
     padding-left: 2%;
 }

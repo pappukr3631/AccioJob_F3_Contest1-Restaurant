@@ -52,7 +52,7 @@ async function getMenu() {
         });
 }
 // Auto calling when loading the page
-// getMenu();
+getMenu();
 
 function TakeOrder() {
     let randomObj = {};

@@ -17,7 +17,10 @@ async function getMenu() {
             <div class="food-item">
                 <img src=${result[i].imgSrc} alt="Food img">
                 <h2>${result[i].name}</h2>
-                <p>$ ${result[i].price}</p>
+                <div class="price">
+                    <p>$ ${result[i].price}</p>
+                    <img src="img/add.svg">
+                </div>
             </div>`
             innerHTMLContent += innerContent;
         }
@@ -49,7 +52,7 @@ async function getMenu() {
         });
 }
 // Auto calling when loading the page
-// getMenu();
+getMenu();
 
 function TakeOrder() {
     let randomObj = {};

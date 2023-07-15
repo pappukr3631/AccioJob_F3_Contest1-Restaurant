@@ -18,7 +18,7 @@ async function getMenu() {
                 <img src=${result[i].imgSrc} alt="Food img">
                 <h2>${result[i].name}</h2>
                 <div class="price">
-                    <p>$ ${result[i].price}</p>
+                    <p>$ ${result[i].price}/-</p>
                     <a href="#"><img src="img/add.svg"></a>
                 </div>
             </div>`
